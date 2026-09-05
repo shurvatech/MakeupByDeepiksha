@@ -223,20 +223,22 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 36px;
+  padding: 15px 32px;
   background: var(--rose);
   color: var(--pearl);
   font-family: var(--sans);
   font-size: 0.76rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   border: 1px solid var(--rose);
   transition: all var(--transition-smooth);
   cursor: pointer;
   text-align: center;
   position: relative;
-  white-space: nowrap;
+  max-width: 100%;
+  box-sizing: border-box;
+  line-height: 1.4;
 }
 
 .btn:hover {
@@ -2020,15 +2022,21 @@ footer .copyright {
   .hero-cta-group .btn {
     width: 100%;
     text-align: center;
-    padding: 14px 20px;
-    font-size: 0.74rem;
-    letter-spacing: 0.18em;
+    padding: 13px 20px;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
   }
 
   .btn {
-    padding: 14px 28px;
-    font-size: 0.74rem;
-    max-width: 90vw;
+    padding: 13px 22px;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    white-space: normal;
+    text-wrap: balance;
+    max-width: 100%;
+    width: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .service-grid {
@@ -2178,9 +2186,25 @@ footer .copyright {
   }
 }
 
+@media (max-width: 480px) {
+  .btn {
+    padding: 12px 16px;
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    max-width: 100%;
+    line-height: 1.45;
+  }
+}
+
 @media (max-width: 380px) {
   .hero h1 {
     font-size: 2.3rem;
+  }
+
+  .btn {
+    padding: 11px 14px;
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
   }
 
   .f-cols {
