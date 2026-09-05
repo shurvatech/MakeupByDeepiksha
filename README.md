@@ -17,7 +17,6 @@ A luxury, responsive multipage static website rebuilt for **MakeupByDeepiksha**,
   - `services.html` — Detailed bridal, engagement, sangeet, reception glam, and full inclusions (draping, lashes, lenses, extensions, styling consultations).
   - `work.html` — Photography-first portfolio gallery with category filters and interactive full-image lightbox modal.
   - `pricing.html` — Complete Mumbai/Navi Mumbai/Thane & Outstation investment tables, inclusions, and trial run policies.
-  - `policies.html` — All 10 official bridal makeup terms & conditions clearly presented.
   - `contact.html` — Conversion-focused booking page with direct click-to-call, WhatsApp booking, Instagram profile link, and consultation enquiry form.
 
 ---
@@ -50,7 +49,6 @@ makeupbydeepiksha/
 ├── services.html         # Services page
 ├── work.html             # Portfolio gallery with Lightbox
 ├── pricing.html          # Investment & Pricing details
-├── policies.html         # Official terms & conditions
 ├── contact.html          # Contact & booking inquiry form
 │
 ├── css/
