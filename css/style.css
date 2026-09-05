@@ -126,16 +126,11 @@ textarea:focus-visible {
   transform: translateY(28px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
-
 }
 
 .reveal.in {
   opacity: 1;
   transform: translateY(0);
-}
-
-.btn-revel {
-  margin-left: 10px;
 }
 
 .reveal-scale {
@@ -228,7 +223,7 @@ textarea:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 36px;
+  padding: 16px 20px;
   background: var(--rose);
   color: var(--pearl);
   font-family: var(--sans);
@@ -583,20 +578,15 @@ section {
 /* ---------- Page Header (Inner Pages) ---------- */
 .page-header {
   position: relative;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
+  display: block;
   background: var(--blush);
   padding: clamp(120px, 16vh, 165px) 6vw clamp(40px, 6vh, 65px);
+  text-align: center;
   border-bottom: 1px solid var(--gold-light);
   width: 100%;
 }
 
 .page-header .eyebrow {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
   margin-bottom: 14px;
 }
