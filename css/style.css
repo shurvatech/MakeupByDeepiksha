@@ -281,7 +281,8 @@ textarea:focus-visible {
 }
 
 /* ---------- Header & Navigation ---------- */
-header {
+header#siteHeader,
+#siteHeader {
   position: fixed;
   top: 0;
   left: 0;
@@ -296,8 +297,10 @@ header {
 }
 
 /* Solid state for scrolled or inner pages */
-header.scrolled,
-header.header-solid {
+header#siteHeader.scrolled,
+header#siteHeader.header-solid,
+#siteHeader.scrolled,
+#siteHeader.header-solid {
   background: var(--pearl);
   box-shadow: 0 2px 24px rgba(58, 41, 39, 0.08);
   padding: 14px 6vw;
@@ -318,8 +321,8 @@ header.header-solid {
   white-space: nowrap;
 }
 
-header.scrolled .logo,
-header.header-solid .logo {
+#siteHeader.scrolled .logo,
+#siteHeader.header-solid .logo {
   color: var(--cocoa);
 }
 
@@ -368,16 +371,16 @@ nav.desktop-nav a:hover::after {
   left: 0;
 }
 
-header.scrolled nav.desktop-nav a,
-header.header-solid nav.desktop-nav a {
+#siteHeader.scrolled nav.desktop-nav a,
+#siteHeader.header-solid nav.desktop-nav a {
   color: var(--cocoa);
   opacity: 0.85;
 }
 
-header.scrolled nav.desktop-nav a:hover,
-header.scrolled nav.desktop-nav a.active,
-header.header-solid nav.desktop-nav a:hover,
-header.header-solid nav.desktop-nav a.active {
+#siteHeader.scrolled nav.desktop-nav a:hover,
+#siteHeader.scrolled nav.desktop-nav a.active,
+#siteHeader.header-solid nav.desktop-nav a:hover,
+#siteHeader.header-solid nav.desktop-nav a.active {
   color: var(--rose);
   opacity: 1;
 }
@@ -420,8 +423,8 @@ header.header-solid nav.desktop-nav a.active {
   transform-origin: 1px;
 }
 
-header.scrolled .nav-toggle span,
-header.header-solid .nav-toggle span {
+#siteHeader.scrolled .nav-toggle span,
+#siteHeader.header-solid .nav-toggle span {
   background: var(--cocoa);
 }
 
@@ -575,24 +578,40 @@ section {
 /* ---------- Page Header (Inner Pages) ---------- */
 .page-header {
   position: relative;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
   background: var(--blush);
-  padding: clamp(140px, 18vh, 180px) 6vw clamp(50px, 8vh, 80px);
-  text-align: center;
+  padding: clamp(120px, 16vh, 165px) 6vw clamp(40px, 6vh, 65px);
   border-bottom: 1px solid var(--gold-light);
+  width: 100%;
+}
+
+.page-header .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
 }
 
 .page-header h1 {
-  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
   margin-bottom: 12px;
+  line-height: 1.1;
+  text-align: center;
 }
 
 .page-header p.page-subtitle {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
   color: var(--rose);
   max-width: 650px;
   margin: 0 auto;
+  line-height: 1.55;
+  text-align: center;
 }
 
 .breadcrumbs {
@@ -600,7 +619,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 18px;
   font-size: 0.72rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -1852,13 +1871,16 @@ footer .copyright {
 
 /* ---------- Responsive Breakpoints ---------- */
 @media (max-width: 1024px) {
-  header {
-    padding: 18px 5vw;
+  header#siteHeader,
+  #siteHeader {
+    padding: 18px 4vw;
   }
 
-  header.scrolled,
-  header.header-solid {
-    padding: 12px 5vw;
+  header#siteHeader.scrolled,
+  header#siteHeader.header-solid,
+  #siteHeader.scrolled,
+  #siteHeader.header-solid {
+    padding: 12px 4vw;
   }
 
   .about-grid {
@@ -1894,6 +1916,17 @@ footer .copyright {
 }
 
 @media (max-width: 860px) {
+  header#siteHeader,
+  #siteHeader {
+    padding: 16px 20px;
+  }
+
+  header#siteHeader.scrolled,
+  header#siteHeader.header-solid,
+  #siteHeader.scrolled,
+  #siteHeader.header-solid {
+    padding: 12px 20px;
+  }
 
   nav.desktop-nav,
   .nav-book-btn {
@@ -1922,47 +1955,62 @@ footer .copyright {
 
 @media (max-width: 640px) {
   section {
-    padding: 60px 5vw;
+    padding: 60px 20px;
   }
 
   .page-header {
-    padding: 110px 5vw 45px;
+    padding: 100px 20px 40px;
+    text-align: center;
   }
 
   .page-header h1 {
-    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .page-header p.page-subtitle {
+    font-size: 1.05rem;
+    margin-top: 10px;
+  }
+
+  .breadcrumbs {
+    margin-top: 14px;
+    font-size: 0.68rem;
   }
 
   .section-title-wrap {
-    margin-bottom: 36px;
+    margin-bottom: 32px;
   }
 
   .section-title-wrap h2 {
-    font-size: clamp(1.9rem, 7vw, 2.7rem);
+    font-size: clamp(1.9rem, 7vw, 2.6rem);
   }
 
   .eyebrow {
     font-size: 0.68rem;
-    letter-spacing: 0.22em;
-    gap: 10px;
-    margin-bottom: 14px;
+    letter-spacing: 0.2em;
+    gap: 8px;
+    margin-bottom: 12px;
   }
 
   .hero {
     min-height: 520px;
   }
 
+  .hero-img {
+    object-position: 50% 18%;
+  }
+
   .hero-content {
-    padding: 0 5vw 7vh;
+    padding: 0 20px clamp(28px, 5vh, 48px);
   }
 
   .hero h1 {
-    font-size: clamp(2.6rem, 11vw, 4.2rem);
+    font-size: clamp(2.3rem, 9.5vw, 3.2rem);
   }
 
   .hero p {
-    font-size: 1.08rem;
-    margin-top: 14px;
+    font-size: 1.02rem;
+    margin-top: 12px;
   }
 
   .hero-cta-group {
