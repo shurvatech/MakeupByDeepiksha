@@ -1,10 +1,15 @@
-# MakeupByDeepiksha — Official Multipage Static Website
+# MakeupByDeepiksha — Official Multipage Luxury Bridal Website
+
+<p align="center">
+  <img src="images/hero.jpg" alt="MakeupByDeepiksha Hero Banner" width="100%" style="border-radius: 8px; max-height: 420px; object-fit: cover;" />
+</p>
 
 A luxury, responsive multipage static website rebuilt for **MakeupByDeepiksha**, professional bridal makeup artist based in Vashi, Navi Mumbai.
 
-## Website Overview
+## ✨ Features & Highlights
 
-- **Brand Identity**: Preserved approved luxury editorial bridal aesthetic with exact color palette and typography.
+- **Brand Identity**: Preserved approved luxury editorial bridal aesthetic with exact color palette (`--pearl`, `--blush`, `--petal`, `--rose`, `--cocoa`, `--gold`) and typography (*Cormorant Garamond* & *Jost*).
+- **SEO & Social Sharing Ready**: Complete OpenGraph, Twitter Card, JSON-LD Schema structured data, robots, and luxury SVG/PNG favicon support across all pages.
 - **Architecture**: 100% Static HTML5, CSS3, and Vanilla JavaScript with zero external runtime frameworks or backend dependencies.
 - **Pages**:
   - `index.html` — Homepage featuring Hero, About intro, Services preview, Signature Work highlights, The Experience process, 11 Kind Words Testimonials slider, Pricing snapshot, and Booking CTA.
@@ -55,6 +60,7 @@ makeupbydeepiksha/
 │   └── script.js         # Mobile drawer, scroll reveal, carousel, and lightbox logic
 │
 ├── images/
+│   ├── favicon.svg       # Luxury gold & rose brand SVG favicon
 │   ├── hero.jpg          # Original hero image
 │   ├── about-main.jpg    # Deepiksha applying makeup
 │   ├── about-portrait.jpg# Deepiksha artist portrait
