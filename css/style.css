@@ -2026,9 +2026,9 @@ footer .copyright {
   }
 
   .btn {
-    padding: 14px 28px;
+    padding: 14px 20px;
     font-size: 0.74rem;
-    margin-right: 10px;
+    max-width: 90vw;
   }
 
   .service-grid {
