@@ -22,7 +22,9 @@
 }
 
 /* ---------- Reset & Base ---------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -55,7 +57,10 @@ body.menu-open {
   overflow: hidden;
 }
 
-main, section, header, footer {
+main,
+section,
+header,
+footer {
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
@@ -80,7 +85,12 @@ button {
   cursor: pointer;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--serif);
   font-weight: 500;
   line-height: 1.12;
@@ -95,12 +105,17 @@ p:last-child {
   margin-bottom: 0;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
 /* ---------- Accessibility Focus States ---------- */
-a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 4px;
 }
@@ -134,11 +149,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   html {
     scroll-behavior: auto;
   }
-  .reveal, .reveal-scale {
+
+  .reveal,
+  .reveal-scale {
     transition: none !important;
     opacity: 1 !important;
     transform: none !important;
   }
+
   * {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
@@ -161,7 +179,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   margin-bottom: 20px;
 }
 
-.eyebrow::before, .eyebrow::after {
+.eyebrow::before,
+.eyebrow::after {
   content: '';
   width: 34px;
   height: 1px;
@@ -189,7 +208,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   color: var(--gold);
 }
 
-.eyebrow.light::before, .eyebrow.light::after {
+.eyebrow.light::before,
+.eyebrow.light::after {
   background: var(--gold);
 }
 
@@ -704,8 +724,13 @@ section {
 }
 
 @keyframes cue {
-  0% { top: -46px; }
-  100% { top: 46px; }
+  0% {
+    top: -46px;
+  }
+
+  100% {
+    top: 46px;
+  }
 }
 
 /* ---------- About Preview / Full Page ---------- */
@@ -1473,7 +1498,8 @@ section {
   margin-bottom: 20px;
 }
 
-.policy-card p, .policy-card li {
+.policy-card p,
+.policy-card li {
   font-weight: 300;
   line-height: 1.8;
   opacity: 0.92;
@@ -1626,7 +1652,8 @@ section {
   margin-bottom: 4px;
 }
 
-.channel-detail a, .channel-detail p {
+.channel-detail a,
+.channel-detail p {
   font-family: var(--serif);
   font-size: 1.35rem;
   color: var(--cocoa);
@@ -1828,31 +1855,38 @@ footer .copyright {
   header {
     padding: 18px 5vw;
   }
+
   header.scrolled,
   header.header-solid {
     padding: 12px 5vw;
   }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 50px;
   }
+
   .about-img-wrap {
     max-width: 500px;
     margin: 0 auto;
     padding-bottom: 24px;
     padding-right: 20px;
   }
+
   .about-img-wrap .inset-portrait {
     right: 0;
     bottom: 0;
     width: 50%;
   }
+
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .gallery-grid {
     column-count: 2;
   }
+
   .contact-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -1860,22 +1894,27 @@ footer .copyright {
 }
 
 @media (max-width: 860px) {
+
   nav.desktop-nav,
   .nav-book-btn {
     display: none;
   }
+
   .nav-toggle {
     display: flex;
   }
+
   .exp-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
+
   .price-grid,
   .booking-trial-grid,
   .philosophy-grid {
     grid-template-columns: 1fr;
   }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -1885,43 +1924,54 @@ footer .copyright {
   section {
     padding: 60px 5vw;
   }
+
   .page-header {
     padding: 110px 5vw 45px;
   }
+
   .page-header h1 {
     font-size: clamp(2.2rem, 8vw, 3.2rem);
   }
+
   .section-title-wrap {
     margin-bottom: 36px;
   }
+
   .section-title-wrap h2 {
     font-size: clamp(1.9rem, 7vw, 2.7rem);
   }
+
   .eyebrow {
     font-size: 0.68rem;
     letter-spacing: 0.22em;
     gap: 10px;
     margin-bottom: 14px;
   }
+
   .hero {
     min-height: 520px;
   }
+
   .hero-content {
     padding: 0 5vw 7vh;
   }
+
   .hero h1 {
     font-size: clamp(2.6rem, 11vw, 4.2rem);
   }
+
   .hero p {
     font-size: 1.08rem;
     margin-top: 14px;
   }
+
   .hero-cta-group {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
     margin-top: 26px;
   }
+
   .hero-cta-group .btn {
     width: 100%;
     text-align: center;
@@ -1929,70 +1979,98 @@ footer .copyright {
     font-size: 0.74rem;
     letter-spacing: 0.18em;
   }
+
   .btn {
     padding: 14px 28px;
     font-size: 0.74rem;
   }
+
   .service-grid {
     grid-template-columns: 1fr;
   }
+
   .service-card {
     padding: 36px 22px;
   }
+
   .includes-box {
     padding: 30px 20px;
     margin-top: 40px;
   }
+
   .gallery-filters {
     gap: 8px;
     margin-bottom: 28px;
   }
+
   .filter-btn {
     padding: 7px 16px;
     font-size: 0.68rem;
     letter-spacing: 0.12em;
   }
+
   .gallery-grid {
     column-count: 1;
     column-gap: 0;
   }
+
   .price-card {
     padding: 30px 20px;
   }
+
   .price-row {
     padding: 12px 0;
     font-size: 0.9rem;
     gap: 10px;
   }
+
   .price-row span:last-child {
     font-size: 1.1rem;
   }
+
   .policy-card {
     padding: 30px 20px;
   }
+
   .contact-info-card,
   .contact-form-wrap {
     padding: 30px 20px;
   }
+
   .contact-info-card h3,
   .contact-form-wrap h3 {
     font-size: 1.6rem;
   }
-  .channel-detail a, .channel-detail p {
+
+  .channel-detail a,
+  .channel-detail p {
     font-size: 1.15rem;
     word-break: break-word;
   }
+
   .lightbox-nav-btn {
     width: 40px;
     height: 40px;
     font-size: 1.4rem;
   }
-  .lightbox-prev { left: 10px; }
-  .lightbox-next { right: 10px; }
-  .lightbox-close { top: 16px; right: 18px; }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-close {
+    top: 16px;
+    right: 18px;
+  }
+
   .footer-top {
     gap: 32px;
   }
+
   .f-cols {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -2005,19 +2083,23 @@ footer .copyright {
   .logo-full {
     display: none;
   }
+
   .logo-short {
     display: inline;
   }
+
   .about-img-wrap {
     padding-bottom: 18px;
     padding-right: 12px;
   }
+
   .about-img-wrap .inset-portrait {
     width: 54%;
     right: 0;
     bottom: 0;
     padding: 6px;
   }
+
   .about-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2025,20 +2107,25 @@ footer .copyright {
     margin-top: 30px;
     padding-top: 24px;
   }
+
   .about-stats .stat strong {
     font-size: 2rem;
   }
+
   .term-item {
     grid-template-columns: 36px 1fr;
     gap: 14px;
     padding: 20px 0;
   }
+
   .term-num {
     font-size: 1.5rem;
   }
+
   .term-item h4 {
     font-size: 0.92rem;
   }
+
   .term-item p {
     font-size: 0.92rem;
     line-height: 1.65;
@@ -2049,10 +2136,12 @@ footer .copyright {
   .hero h1 {
     font-size: 2.3rem;
   }
+
   .f-cols {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
   .about-stats {
     grid-template-columns: 1fr;
     gap: 16px;
