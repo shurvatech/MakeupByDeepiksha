@@ -1428,6 +1428,11 @@ section {
 .pricing-section {
   background: var(--pearl);
   text-align: center;
+  padding-bottom: clamp(30px, 4vw, 45px);
+}
+
+.pricing-section + .terms-section {
+  padding-top: clamp(20px, 3vw, 35px);
 }
 
 .price-grid {

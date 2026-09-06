@@ -150,10 +150,20 @@ document.addEventListener('DOMContentLoaded', () => {
       return Math.max(0, totalSlides - visibleSlides);
     }
 
+    const carouselControls = document.querySelector('.t-carousel-controls');
+
+    function updateControlsVisibility() {
+      const maxIndex = getMaxIndex();
+      if (carouselControls) {
+        carouselControls.style.display = maxIndex > 0 ? 'flex' : 'none';
+      }
+    }
+
     function updateSlider() {
       visibleSlides = getVisibleSlideCount();
       const maxIndex = getMaxIndex();
       if (currentIndex > maxIndex) currentIndex = maxIndex;
+      updateControlsVisibility();
 
       const slideWidthPercent = 100 / visibleSlides;
       const offset = -(currentIndex * slideWidthPercent);
@@ -173,6 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function createDots() {
+      updateControlsVisibility();
       if (!dotsContainer) return;
       dotsContainer.innerHTML = '';
       const maxIndex = getMaxIndex();
